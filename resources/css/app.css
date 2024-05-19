@@ -1,0 +1,341 @@
+:root {
+    /**
+     * Declaring variables and assigning them values
+     */
+    /* Background Color */
+    --main-bg-color: #191716;
+    --highlight-bg-color: #BEB7A4;
+    --secondary-bg-color: #E6AF2E;
+
+    /* Text Color */
+    --main-text-color: #BEB7A4;
+    --main-dark-text-color: #837e72;
+    --highlight-text-color: #E6AF2E;
+    --highlight-dark-text-color: #a3750a;
+    --secondary-text-color: #191716;
+
+    --bg-designer-text-color: rgba(224, 226, 219, 0.14);
+    --bg-code-text-color: rgba(224, 226, 219, 0.07);
+
+    /* Fonts */
+    --header-designer-font: "Major Mono Display", monospace;
+    --normal-designer-font: "Inria Sans", sans-serif;
+    --bg-designer-font: "League Script", cursive;
+
+    --header-code-font: "Lexend Mega", sans-serif;
+    --normal-code-font: "JetBrains Mono", monospace;
+    --bg-code-font: "Lexend Zetta", sans-serif;;
+
+    /* Navigation Styles */
+    --nav-bg-color: rgba(190, 183, 164, 0.1);
+}
+
+
+
+/************* COMMON ***************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: var(--main-bg-color);
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+body, main, .container {
+    /*display: block;*/
+    height: 100%;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container {
+    border-bottom: 2px solid var(--highlight-bg-color);
+    max-width: 1600px;
+    width: 100%;
+    display: block;
+    line-height: 1.4;
+}
+
+
+/************* NAVIGATION ***************/
+nav {
+    background-color: var(--main-bg-color);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.navigation {
+    background: var(--nav-bg-color);
+
+    padding: 1rem 2.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+.navigation ul.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    list-style-type: none;
+}
+
+/* LOGO */
+.navigation .nav.logo a h1 {
+    color: var(--highlight-text-color);
+    font-family: var(--header-designer-font);
+}
+.navigation .nav.logo a:hover h1 {
+    color: var(--highlight-dark-text-color);
+}
+/* LINKS */
+.navigation ul.nav li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.navigation ul.nav li a {
+    margin-inline: 0.5rem;
+    padding-inline: 1rem;
+
+    color: var(--main-text-color);
+    font-family: var(--normal-code-font);
+}
+.navigation ul.nav li a:hover {
+    color: var(--main-dark-text-color);
+}
+
+/* WEBSITE */
+.navigation .nav.website a h1 {
+    color: var(--main-text-color);
+    font-weight: normal;
+    font-family: var(--header-code-font);
+}
+.navigation .nav.website a:hover h1 {
+    color: var(--main-dark-text-color);
+}
+
+
+
+/************* MAIN PAGE ***************/
+
+.main.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.main.container .designer{
+    align-items: flex-start;
+    border-right: var(--main-text-color) 1px solid;
+}
+.main.container .code {
+    align-items: flex-end;
+    border-left: var(--main-text-color) 1px solid;
+}
+
+.main.container .designer,
+.main.container .code {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--main-text-color);
+}
+.main.container .designer div,
+.main.container .code div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.main.container .designer div h1 {
+    font-size: 50px;
+    font-family: var(--header-designer-font);
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--highlight-text-color);
+}
+.main.container .code div h1 span,
+.main.container .code div h1 {
+    font-size: 50px;
+    font-family: var(--header-code-font);
+    font-weight: 400;
+}
+.main.container .code div h1 {
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.main.container .designer div p {
+    font-family: var(--normal-designer-font);
+    font-size: 20px;
+}
+.main.container .code div p {
+    font-family: var(--normal-code-font);
+    font-size: 20px;
+    text-align: end;
+}
+
+.main.container div span {
+    width: 100%;
+    padding: 0.2rem;
+
+    font-size: 20px;
+}
+.main.container .designer span {
+    text-align: end;
+    font-family: var(--normal-designer-font);
+}
+.main.container .code span {
+    font-family: var(--normal-code-font);
+}
+
+.main.container .code .background-text,
+.main.container .designer .background-text
+{
+    position: absolute;
+    z-index: -10;
+    width: auto;
+
+    bottom: 20%;
+    font-size: 82px;
+    font-weight: 800;
+
+    /*transform: rotateZ(90deg);*/
+
+    color: var(--bg-code-text-color);
+    font-family: var(--bg-code-font);
+}
+.main.container .designer .background-text {
+    font-size: 100px;
+    font-family: var(--bg-designer-font);
+}
+
+
+
+
+/**************** DIVIDER *************/
+.divider {
+    height: 10em;
+    background-color: var(--highlight-bg-color);
+    width: 100vw;
+}
+
+
+
+
+/************* ABOUT ME ***************/
+.about.container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about.container h1 {
+    margin-bottom: 1em;
+    margin-top: -1.5em;
+
+    font-size: 5em;
+    font-family: var(--header-designer-font);
+    color: var(--highlight-text-color);
+}
+.about.container p {
+    font-size: 20px;
+    color: var(--main-text-color);
+    font-family: var(--normal-designer-font);
+}
+
+
+
+
+/************* Projects ***************/
+.project.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.project.container h1 {
+    font-size: 4.5em;
+    color: var(--main-text-color);
+    font-family: var(--header-code-font);
+    font-weight: 300;
+    text-align: right;
+
+    margin-bottom: 5rem;
+    margin-top: -5rem;
+}
+.project.container span.background-text {
+    position: absolute;
+    margin-top: -8rem;
+
+    font-size: 4rem;
+    font-family: var(--bg-code-font);
+    color: var(--bg-code-text-color);
+}
+.project.container .projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.project.container .projects a {
+    color: var(--highlight-text-color);
+    font-family: var(--normal-code-font);
+}
+.project.container .projects a:hover {
+    color: var(--highlight-dark-text-color);
+}
+.project.container .projects p {
+    width: 100%;
+    margin-top: 4rem;
+
+    color: var(--main-text-color);
+    font-family: var(--normal-code-font);
+}
+.project.container .projects .carousel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.project.container .projects .carousel label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.project.container .projects .carousel label:hover {
+    cursor: pointer;
+}
+.project.container .projects .carousel label input {
+    position: absolute;
+    opacity: 0;
+}
+.project.container .projects .carousel label span {
+    font-family: var(--normal-code-font);
+    color: var(--main-text-color);
+
+    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+    border-right: 2px var(--main-dark-text-color) solid;
+}
+.project.container .projects .carousel label input:checked + span {
+    border-right-color: var(--highlight-text-color);
+}
+
