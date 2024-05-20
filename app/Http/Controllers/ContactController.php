@@ -26,7 +26,6 @@ class ContactController extends Controller
      * */
     public function sendEmail(Request $request)
     {
-        // TODO: call envelope() here and send email
 
         $u_mail = $request->validate([
             'email' => 'bail|required|email',
