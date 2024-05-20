@@ -3,10 +3,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'laravel') }}</title>
+    <title>dhir0hit.com</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,31 @@
 </head>
 <body>
     @include('components.navigation')
+    <div class="information container">
+        <ul>
+            @if (session()->has('message'))
+                <li id="{{ $id = str_replace(" ", "_", session('message')) }}" class="info">
+                    <button
+                        class="close_button"
+                        onclick="getElementById('{{ $id }}').remove()"
+                    >X</button>
+                    <span>{{ session('message') }}</span>
+                </li>
+            @endif
+
+            @if ($errors->any)
+                @foreach($errors->all() as $error)
+                    <li id="{{ $id = str_replace(" ", "_", $error) }}" class="error">
+                        <button
+                            class="close_button"
+                            onclick="getElementById('{{ $id }}').remove()"
+                        >X</button>
+                        <span>{{ $error }}</span>
+                    </li>
+                @endforeach
+            @endif
+        </ul>
+    </div>
     <main>
         {{ $slot }}
     </main>

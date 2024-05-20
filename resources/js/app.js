@@ -19,6 +19,13 @@ let projectList = {
     }
 }
 
+
+/*
+*
+*  PROJECT CAROUSEL
+*
+* */
+
 let projectCarousel = document.querySelectorAll("input[name='project']");
 let projectName = document.getElementById('projectName');
 let projectLink = document.getElementById('projectLink');

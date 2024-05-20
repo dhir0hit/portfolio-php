@@ -1,5 +1,3 @@
 <x-layout>
-    <div>
-        CONTACT
-    </div>
+    @include("components.contact_form")
 </x-layout>

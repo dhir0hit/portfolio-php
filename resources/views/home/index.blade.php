@@ -1,80 +1,27 @@
 <x-layout>
-    <div class="main container">
-        <div class="designer">
-            <div>
-                <h1>Beauty</h1>
-                <p>
-                    Brings out joy to user when. <br/>
-                    experiencing elegant design and a work of 'Art'
-                </p>
-            </div>
-            <span class="background-text">#Frontend</span>
-            <span>tih0rihd@</span>
-        </div>
-        <div class="code">
-            <div>
-                <h1>&lt;<span>beast</span>&gt;</h1>
-                <p>
-                    Brings out terror for developers when <br/>
-                    experiencing this side and making friends with 'Error'
-                </p>
-            </div>
-            <span class="background-text">#Backend</span>
-            <span>@dhir0hit</span>
-        </div>
-    </div>
+    @include("home.main_container")
     <div class="divider">
         {{--TODO: Add icons--}}
-        icons
+        <a href="https://linkedin.com/in/dhir0hit" class="icon" target="_blank">
+            <svg viewBox="64 64 896 896" focusable="false" data-icon="linkedin" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1168.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path></svg>
+        </a>
+
+        <a href="https://twitter.com/dhir0hit" class="icon" target="_blank">
+            <svg viewBox="64 64 896 896" focusable="false" data-icon="twitter" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M928 254.3c-30.6 13.2-63.9 22.7-98.2 26.4a170.1 170.1 0 0075-94 336.64 336.64 0 01-108.2 41.2A170.1 170.1 0 00672 174c-94.5 0-170.5 76.6-170.5 170.6 0 13.2 1.6 26.4 4.2 39.1-141.5-7.4-267.7-75-351.6-178.5a169.32 169.32 0 00-23.2 86.1c0 59.2 30.1 111.4 76 142.1a172 172 0 01-77.1-21.7v2.1c0 82.9 58.6 151.6 136.7 167.4a180.6 180.6 0 01-44.9 5.8c-11.1 0-21.6-1.1-32.2-2.6C211 652 273.9 701.1 348.8 702.7c-58.6 45.9-132 72.9-211.7 72.9-14.3 0-27.5-.5-41.2-2.1C171.5 822 261.2 850 357.8 850 671.4 850 843 590.2 843 364.7c0-7.4 0-14.8-.5-22.2 33.2-24.3 62.3-54.4 85.5-88.2z"></path></svg>
+        </a>
+
+        <a href="https://github.com/dhir0hit" class="icon" target="_blank">
+            <svg viewBox="64 64 896 896" focusable="false" data-icon="github" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path></svg>
+        </a>
+
+        <a href="mailto:rohit@dhir0hit.com" class="icon" target="_blank">
+            <svg viewBox="64 64 896 896" focusable="false" data-icon="mail" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9A7.2 7.2 0 01194 256h648.8a7.2 7.2 0 014.4 12.9z"></path></svg>
+        </a>
+
     </div>
-    <div class="about container">
-        <h1>About Me</h1>
-        <p>
-            <strong>Hey there!</strong>
-            <br/>
-            <br/>
-            I'm [Your Name], a full-stack developer passionate about crafting clean, efficient code. With a background in [briefly mention your background], I thrive on solving complex problems and creating seamless user experiences.
-            <br/>
-            <br/>
-            My skills span [mention your key technologies], and I'm always eager to learn more. Let's collaborate and turn ideas into reality!
-        </p>
-    </div>
-    <div class="project container">
-        <h1>&lt;<span>Projects</span>&gt;</h1>
-        <span id="projectName" class="background-text">Password Safe</span>
-        <div class="projects">
-            <div>
-                <a id="projectLink" href="https://github.com/dhir0hit/Server">
-                    https://github.com/dhir0hit/passwordSafe
-                </a>
-                <p id="projectInfo">
-                    This is first ever Project created By me,
-                    Shell app used to save your passwords.
-                </p>
-            </div>
-
-            <div class="carousel">
-                <label>
-                    <input class="Password Safe" type="radio" name="project" checked="checked">
-                    <span>Password Safe</span>
-                </label>
-
-                <label>
-                    <input class="Personal Server" type="radio" name="project">
-                    <span>Personal Server</span>
-                </label>
-
-                <label>
-                    <input class="My App" type="radio" name="project">
-                    <span>My App</span>
-                </label>
-
-                <label>
-                    <input class="Job Listing" type="radio" name="project">
-                    <span>Job Listing</span>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="contact container"></div>
+    @include("home.about_container")
+    <div style="width: 100vw"></div>
+    @include("home.project_container")
+    <div style="width: 100vw"></div>
+    @include("components.contact_form")
 </x-layout>

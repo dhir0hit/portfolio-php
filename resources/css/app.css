@@ -67,7 +67,7 @@ main {
 nav {
     background-color: var(--main-bg-color);
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 10;
 
     top: 0;
@@ -130,6 +130,106 @@ nav {
     color: var(--main-dark-text-color);
 }
 
+@media only screen and (max-width: 700px) {
+    .navigation {
+        justify-content: center;
+    }
+    .navigation .nav.logo,
+    .navigation .nav.website{
+        display: none;
+    }
+    .navigation ul.nav {
+        justify-content: center;
+    }
+    .navigation ul.nav li a {
+        margin-inline: 0;
+    }
+}
+
+
+
+
+/************* Information PAGE ***************/
+
+
+.information.container{
+    border-bottom: none;
+    width: 400px;
+    display: block;
+    height: auto;
+
+    position: fixed;
+    right: 50px;
+    top: 100px;
+}
+.information.container ul {
+    list-style-type: none;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.information.container ul li {
+    padding: 0 1.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+
+    cursor: pointer;
+}
+.information.container ul li.error {
+    background-color: #ac0000;
+    opacity: 0.4;
+}
+.information.container ul li.error:hover {
+    opacity: 1;
+}
+.information.container ul li.info {
+    background-color: #007a00;
+    opacity: 0.4;
+}
+.information.container ul li.info:hover {
+    opacity: 1;
+}
+.information.container ul li span ,
+.information.container ul li button {
+    font-family: var(--normal-code-font);
+    font-weight: bold;
+    padding-block: 0.7rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.information.container ul li .close_button {
+    font-family: var(--header-code-font);
+}
+.information.container ul li .close_button:hover {
+    color: var(--main-text-color);
+}
+.information.container ul li .close_button:active {
+    color: var(--main-dark-text-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .information.container {
+        right: 0;
+        left: 0;
+        top: 80px;
+        width: 100vw;
+    }
+    .information.container ul li {
+        margin-inline: 1rem;
+    }
+    .information.container ul li span,
+    .information.container ul li button {
+        font-size: 0.7rem;
+    }
+}
+
+
 
 
 /************* MAIN PAGE ***************/
@@ -138,6 +238,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    border: none;
 }
 .main.container .designer{
     align-items: flex-start;
@@ -229,7 +330,59 @@ nav {
     font-family: var(--bg-designer-font);
 }
 
+@media only screen and (max-width: 1600px) {
+    .main.container .designer div,
+    .main.container .code div {
+        padding: 4rem;
+    }
+    .main.container .designer .background-text,
+    .main.container .code .background-text {
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .main.container {
+        flex-direction: column;
+    }
+    .main.container .designer,
+    .main.container .code {
+        border-inline: var(--main-text-color) 1px solid;
+        border: none;
+        height: 100%;
+    }
+    .main.container .designer {
+        border-bottom: var(--main-text-color) 1px solid;
+    }
+    main.container .designer div,
+    .main.container .code div {
+        padding: 3rem;
+    }
+    .main.container .designer .background-text,
+    .main.container .code .background-text {
+        display: none;
+    }
+}
 
+@media only screen and (max-width: 600px) {
+    main.container .designer div,
+    .main.container .code div {
+        padding: 1rem;
+    }
+    .main.container .designer div h1,
+    .main.container .code div h1,
+    .main.container .code div h1 span{
+        font-size: 2.5rem;
+    }
+    .main.container .designer div p{
+        font-size: 1rem;
+    }
+    .main.container .code div p {
+        font-size: 0.8rem;
+    }
+    .main.container div span {
+        font-size: 0.7rem;
+    }
+}
 
 
 /**************** DIVIDER *************/
@@ -237,6 +390,29 @@ nav {
     height: 10em;
     background-color: var(--highlight-bg-color);
     width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+.divider a {
+    color: var(--secondary-text-color);
+}
+.divider a svg {
+    width: 40px;
+    height: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    .divider {
+        gap: 3rem;
+    }
+    .divider a svg {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 
@@ -262,6 +438,22 @@ nav {
     font-size: 20px;
     color: var(--main-text-color);
     font-family: var(--normal-designer-font);
+}
+@media only screen and (max-width: 1400px) {
+    .about.container {
+        margin: 5rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .about.container {
+        margin: 2rem;
+    }
+    .about.container h1 {
+        font-size: 2rem;
+    }
+    .about.container p {
+        font-size: 0.7rem;
+    }
 }
 
 
@@ -339,3 +531,159 @@ nav {
     border-right-color: var(--highlight-text-color);
 }
 
+@media only screen and (max-width: 1700px) {
+    .project.container {
+        padding: 5rem;
+    }
+}
+
+@media only screen and (max-width: 869px) {
+    .project.container {
+        padding: 3rem;
+    }
+    .project.container span.background-text {
+        display: none;
+    }
+    .project.container .projects {
+        flex-direction: column-reverse;
+    }
+    .project.container .projects .carousel {
+        flex-direction: row;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+    .project.container .projects .carousel label span {
+        border-bottom: 2px var(--main-dark-text-color) solid;
+        border-right: none;
+    }
+    .project.container .projects .carousel label input:checked + span {
+        border-bottom-color: var(--highlight-text-color);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project.container {
+        padding: 0;
+    }
+    .project.container h1 {
+        font-size: 3em;
+    }
+    .project.container .projects a {
+        font-size: 0.7rem;
+    }
+    .project.container .projects p {
+        font-size: 0.7rem;
+    }
+    .project.container .projects .info {
+        margin-inline: 2rem;
+    }
+    .project.container .projects .carousel label span {
+        font-size: 0.7rem;
+        padding-inline: 1rem;
+    }
+}
+
+
+
+
+/*-----------------------CONTACT-----------------------------*/
+
+.contact.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+}
+.contact.container form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.contact.container form h1 {
+    color: var(--highlight-text-color);
+    font-size: 4.5rem;
+    font-family: var(--header-designer-font);
+    margin-bottom: 1rem;
+}
+.contact.container form div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+}
+.contact.container form label {
+    width: 100%;
+}
+.contact.container form input,
+.contact.container form span,
+.contact.container form button,
+.contact.container form textarea,
+.contact.container form .submit.container a {
+    width: 100%;
+    background-color: var(--bg-designer-text-color);
+    border: none;
+    color: var(--main-text-color);
+    font-size: 18px;
+
+    padding: 0.5rem 1rem;
+    margin: 0;
+    outline: none;
+    font-family: var(--normal-designer-font);
+}
+.contact.container form input,
+.contact.container form button,
+.contact.container form textarea {
+    margin-block: 0.3rem;
+}
+.contact.container form textarea {
+    resize: vertical;
+}
+.contact.container form span {
+    font-family: var(--header-designer-font);
+    height: 100%;
+    width: auto;
+}
+.contact.container form input::placeholder {
+    color: var(--main-dark-text-color);
+}
+.contact.container form .submit.container {
+    border-bottom: 0;
+}
+.contact.container form .submit.container a {
+    text-align: center;
+}
+.contact.container form .submit.container button:hover,
+.contact.container form .submit.container a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1800px) {
+    .contact.container {
+        margin: 5rem;
+    }
+    .contact.container form {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .contact.container form {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .contact.container {
+        margin: 2rem;
+    }
+    .contact.container form h1 {
+        font-size: 3em;
+    }
+    .contact.container form div {
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact.container form .submit.container span {
+        display: none;
+    }
+}
